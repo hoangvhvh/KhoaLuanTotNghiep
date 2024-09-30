@@ -154,6 +154,7 @@
 				<thead>
 					<tr>
 						<th>Sản phẩm</th>
+						<th>Size</th>
 						<th>giá tiền</th>
 						<th>Số lượng</th>
 						<th>Mã khuyễn mãi</th>
@@ -168,22 +169,24 @@
 					@foreach ($cart_array as $key => $cart)
 					@php
 					$size=$cart['product_size'];
-					$km=$cart['product_price']-$cart['product_km'];
+					$_price=($cart['product_price']-$cart['product_km']);
+					$km=$_price*$cart['product_sales_quantity'];
 					if($size=="Lớn")
 					{
-					$price=($km+(($km*20)/100));
-					$sub=($km+(($km*20)/100))*$cart['product_qty'];
+					$price=($_price+(($_price*20)/100));
+					$sub=($km+(($km*20)/100));
 					}elseif($size=="Nhỏ"){
-					$price=($km-(($km*20)/100));
-					$sub=($km-(($km*20)/100))*$cart['product_qty'];
+					$price=($_price-(($_price*20)/100));
+					$sub=($km-(($km*20)/100));
 					}else{
 					$price=$km;
-					$sub=$km*$cart['product_qty'];
+					$sub=$km;
 					}
 					$total += $sub;
 					@endphp
 					<tr>
 						<td>{{$cart['product_name']}}</td>
+						<td>{{$cart['product_size']}}</td>
 						<td>{{number_format($price,0,',','.')}}VND</td>
 						<td>{{$cart['product_qty']}}</td>
 						<td>{{$code['coupon_code']}}</td>
