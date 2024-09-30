@@ -139,8 +139,10 @@ class OrderController extends Controller
 			$km = $details->product_price * $details->product_sales_quantity;
 			if ($details->product_size == "Lớn") {
 				$subtotal = ($km + (($km * 20) / 100));
+				$_price = ($details->product_price + (($details->product_price * 20) / 100));
 			} elseif ($details->product_size == "Nhỏ") {
 				$subtotal = ($km) - ($km * 20) / 100;
+				$_price = ($details->product_price - (($details->product_price * 20) / 100));
 			} else {
 				$subtotal = ($km);
 			}
@@ -166,7 +168,7 @@ class OrderController extends Controller
               <input type="hidden" name="order_code" class="order_code" value="' . $details->order_code . '">
 
               <input type="hidden" name="order_product_id" class="order_product_id" value="' . $details->product_id . '"></td>
-            <td>' . $details->product_price . '</td>
+            <td>' . $_price . '</td>
             <td>' . number_format($subtotal, 0, ',', '.') . 'đ</td>
           </tr>';
 		}
@@ -356,6 +358,7 @@ class OrderController extends Controller
 		Session::put('or-nu', $count);
 
 		//lay san pham
+		$details = OrderDetail::where('order_code', $order->order_code)->first();
 
 		foreach ($data['order_product_id'] as $key => $product) {
 			$product_mail = Product::find($product);
@@ -366,8 +369,9 @@ class OrderController extends Controller
 					$cart_array[] = array(
 						'product_name' => $product_mail['product_name'],
 						'product_price' => $product_mail['product_price'],
-						'product_km' => $product_mail['price_pro'],
-						'product_size' => $product_mail['size'],
+						'product_sales_quantity' => $details['product_sales_quantity'],
+						'product_km' => $product_mail['gia_km'],
+						'product_size' => $details['product_size'],
 						'product_qty' => $qty
 					);
 				}
@@ -376,7 +380,6 @@ class OrderController extends Controller
 
 
 		//lay shipping
-		$details = OrderDetail::where('order_code', $order->order_code)->first();
 
 		$fee_ship = $details->product_feeship;
 		$coupon_mail = $details->product_coupon == 'no' ? 'Không sử dụng' : $details->product_coupon;
