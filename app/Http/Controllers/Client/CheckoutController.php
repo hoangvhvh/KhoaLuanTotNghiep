@@ -143,8 +143,14 @@ class  CheckoutController extends Controller
         $total = 0;
 
         foreach ($order_details_product as $key => $product) {
-
-            $subtotal = $product->product_price * $product->product_sales_quantity;
+            if ($product->product_size == "Lớn") {
+                $_price = ( $product->product_price + (( $product->product_price * 20) / 100));
+            } elseif ($$product->product_size == "Nhỏ") {
+                $_price = ( $product->product_price - (( $product->product_price * 20) / 100));
+            } else {
+                $_price =  $product->product_price;
+            }
+                $subtotal =  $_price * $product->product_sales_quantity;
             $total += $subtotal;
 
             if ($product->product_coupon != 'no') {
@@ -158,7 +164,7 @@ class  CheckoutController extends Controller
             <td class="center">' . $product->product_name . '</td>
             <td class="center">' . $product->product_size . '</td>
             <td class="center">' . $product->product_sales_quantity . '</td>
-            <td class="center">' . number_format($product->product_price, 0, ',', '.') . 'đ' . '</td>
+            <td class="center">' . number_format($_price, 0, ',', '.') . 'đ' . '</td>
             <td class="center">' . number_format($subtotal, 0, ',', '.') . 'đ' . '</td>
 
             </tr>';
