@@ -137,6 +137,7 @@ class OrderController extends Controller
 		foreach ($order_details as $key => $details) {
 			$i++;
 			$km = $details->product_price * $details->product_sales_quantity;
+			$_price=0;
 			if ($details->product_size == "Lớn") {
 				$subtotal = ($km + (($km * 20) / 100));
 				$_price = ($details->product_price + (($details->product_price * 20) / 100));
@@ -144,6 +145,7 @@ class OrderController extends Controller
 				$subtotal = ($km) - ($km * 20) / 100;
 				$_price = ($details->product_price - (($details->product_price * 20) / 100));
 			} else {
+				$_price=$details->product_price;
 				$subtotal = ($km);
 			}
 

@@ -276,7 +276,7 @@
 
 								<?php
 								if (session('cart')) { ?>
-									<input type="submit" value="@lang('lang.order_con')" name="send_order" class="btn btn-info btn-sm order text-white">
+									<input type="submit" value="@lang('lang.order_con')" name="send_order" class="btn btn-info btn-sm order text-white bg-dark">
 								<?php } else { ?>
 									<input type="submit" value="KHÔNG CÓ SẢN PHẨM ĐỂ THANH TOÁN" name="send_order" disabled class="btn btn-danger btn-sm order text-white">
 								<?php } ?>

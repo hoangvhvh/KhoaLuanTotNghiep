@@ -220,7 +220,7 @@
         var value = $(this).val();
         $.ajax({
             type: 'get',
-            url: '{{url(' / product / search ')}}',
+            url: '{{url('/product/search')}}',
             data: {
                 search: value
             },
@@ -375,7 +375,7 @@
         // alert(order_qty);
         // alert(order_code);
         $.ajax({
-            url: '{{url(' / update - qty ')}}',
+            url: '{{url('/update-qty')}}',
 
             method: 'POST',
 
@@ -435,7 +435,7 @@
         if (j == 0) {
 
             $.ajax({
-                url: '{{url(' / update - order - qty ')}}',
+                url: '{{url('/update-order-qty')}}',
                 method: 'POST',
                 data: {
                     _token: _token,

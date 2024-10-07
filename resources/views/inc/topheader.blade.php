@@ -8,7 +8,7 @@
 						
 						
 						<li class="text-center border-right text-black">
-							<marquee><i style="color:black;" class="fas fa-phone mr-2"></i>+84 377 456 265</marquee>
+							<marquee><i style="color:black;" class="fas fa-phone mr-2"></i>+84 933 615 661</marquee>
 						</li>
 					
 						<?php

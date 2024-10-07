@@ -125,7 +125,7 @@
 					<div class="w3l-range join">
 						<ul>
 							<li>
-								<a class="giatri" href="{{request()->fullUrlWithQuery(['price' => 1])}}">dưới 10.000 VNĐ</a>
+								<a class="giatri" href="{{request()->fullUrlWithQuery(['price' => 1])}}">Dưới 10.000 VNĐ</a>
 							</li>
 							<li class="my-1">
 								<a class="giatri" href="{{request()->fullUrlWithQuery(['price' => 2])}}">10.000 VNĐ - 15.000 VNĐ</a>
@@ -143,7 +143,7 @@
 								<a class="giatri" href="{{request()->fullUrlWithQuery(['price' => 6])}}">40.000 VNĐ - 50.000 VNĐ</a>
 							</li>
 							<li class="my-1">
-								<a class="giatri" href="{{request()->fullUrlWithQuery(['price' => 7])}}">trên 50.000 VNĐ</a>
+								<a class="giatri" href="{{request()->fullUrlWithQuery(['price' => 7])}}">Trên 50.000 VNĐ</a>
 							</li>
 						</ul>
 					</div>

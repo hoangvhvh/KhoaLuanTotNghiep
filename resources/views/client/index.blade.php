@@ -165,11 +165,11 @@
 											<div class="row">
 												<div class="col-sm-7 offer-name">
 													<h6>@lang('lang.sanphammoi')</h6>
-													<h4 class="mt-2 mb-3">Trà sữa chocola mới ra</h4>
+													<h4 class="mt-2 mb-3">Trà sữa cheese trân châu</h4>
 													<p>@lang('lang.giamgia')</p>
 												</div>
 												<div class="col-sm-5 offerimg-w3l">
-													<img src="{!! asset('web/images/z10.png')!!}" alt="" class="img-fluid">
+													<img src="{!! asset('web/images/z10.jpg')!!}" alt="" class="img-fluid">
 												</div>
 											</div>
 										</div>
@@ -183,7 +183,7 @@
 													<p>@lang('lang.decript_giaohang')</p>
 												</div>
 												<div class="col-sm-5 offerimg-w3l">
-													<img src="{!! asset('web/images/z11.png')!!}" alt="" class="img-fluid">
+													<img src="{!! asset('web/images/z11.jpg')!!}" alt="" class="img-fluid">
 												</div>
 											</div>
 										</div>

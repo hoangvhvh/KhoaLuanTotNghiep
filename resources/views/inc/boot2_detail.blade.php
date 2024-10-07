@@ -224,7 +224,7 @@
                     _token: _token
                 },
                 success: function(data) {
-                    toastr.success('add comment success');
+                    toastr.success('Thêm bình luận thành công');
                     $('#commentForm').trigger('reset');
                     show_comment();
                     $('#commentId').val(0);
