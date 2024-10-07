@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="{{URL::to('/trangchu')}}" class="site_title"><i class="fa fa-paw"></i> <span>Quản lý !</span></a>
+              <a href="{{URL::to('/trangchu')}}" class="site_title"><i class="fa fa-star"></i> <span>Quản lý !</span></a>
             </div>
 
             <div class="clearfix"></div>

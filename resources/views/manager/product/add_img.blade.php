@@ -78,7 +78,7 @@
                     <td class="taiche">
                       @foreach($img as $i)
                       <div class="baoimg">
-                        <span class="pos"><a href="{{route('del_img',$i->image_id)}}"><i  class="glyphicon glyphicon-remove icon1"></i></a></span><img class="pro_img" src="{!! asset('upload_img/'.$i->images)!!}" alt="" width="120px" height="120px"> 
+                        <span class="pos"><a href="{{route('del_img',$i->image_id)}}"><i  class="glyphicon glyphicon-remove icon1"></i></a></span><img style="width: 100%;" class="pro_img" src="{!! asset('upload_img/'.$i->images)!!}" alt="" width="120px" height="120px"> 
                       </div>
                       @endforeach
                     </td>
