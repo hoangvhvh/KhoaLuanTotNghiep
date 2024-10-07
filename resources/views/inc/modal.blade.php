@@ -20,7 +20,7 @@
 						</div>
 						
 						<div class="right-w3l" style="backgound">
-							<input type="submit" style="background-color: firebrick" class="form-control" value="@lang('lang.login')">
+							<input type="submit" style="background-color: #d3b673" class="form-control" value="@lang('lang.login')">
 						</div>
 						<p class="text-center dont-do mt-3">
 							<a href="#" data-toggle="modal" data-target="#exampleModal3">
@@ -75,7 +75,7 @@
 							<input type="password" class="form-control" placeholder=" " name="re_password">
 						</div>
 						<div class="right-w3l">
-							<input type="submit" style="background-color: firebrick" class="form-control" value="Đăng ký">
+							<input type="submit" style="background-color: #d3b673" class="form-control" value="Đăng ký">
 						</div>
 						
 					</form>
@@ -101,7 +101,7 @@
 							<input type="email" class="form-control" placeholder=" " name="email"  >
 						</div>
 						<div class="right-w3l">
-							<input type="submit" style="background-color: firebrick" class="form-control" value="@lang('lang.Confirm')">
+							<input type="submit" style="background-color: #d3b673" class="form-control" value="@lang('lang.Confirm')">
 						</div>
 						
 					</form>

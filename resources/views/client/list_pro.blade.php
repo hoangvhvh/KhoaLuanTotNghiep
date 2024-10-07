@@ -31,7 +31,7 @@
 											<span class="badge badge-pill badge-danger ban">-{{ROUND($gia,1)}}%</span>
 											@endif
 											<div class="scale-img">
-												<img  class="pro_img3" src="{!! asset('images/'.$s1->product_image)!!}" alt="">
+												<img  class="pro_img3" style="width: 100%;" src="{!! asset('images/'.$s1->product_image)!!}" alt="">
 
 												<!--  -->
 
@@ -80,7 +80,7 @@
 
 
 
-															<input type="button" data-toggle="modal" data-target="#xemnhanh" style="background: tomato"  value="@lang('lang.quickview')" class="btn btn-default xemnhanh" data-id_product="{{$s1->product_id}}" name="add-to-cart">
+															<input type="button" data-toggle="modal" data-target="#xemnhanh" style="background: #d3b673"  value="@lang('lang.quickview')" class="btn btn-default xemnhanh" data-id_product="{{$s1->product_id}}" name="add-to-cart">
 														</fieldset>
 													</form> 
 												</div>

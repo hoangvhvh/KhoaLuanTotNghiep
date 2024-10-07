@@ -16,7 +16,7 @@
         </div>
     </div>
 </div>
-<div class="contact" style="background: #ecd7d1;" >
+<div class="contact" style="background: #f5f5f5;" >
     <br><br>      
     <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
     @lang('lang.intro')</h3>

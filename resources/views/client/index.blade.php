@@ -1,7 +1,7 @@
 @extends('client/layout_cli')
 @section('content')
 
-<div class="ads-grid py-sm-5 py-4">
+<div class="ads-grid py-sm-3">
 	<div class="container py-xl-4 py-lg-2">
 		<!-- tittle heading -->
 		<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
@@ -15,15 +15,22 @@
 			<div class="agileinfo-ads-display col-lg-12">
 				<div class="wrapper">
 					<!-- first section -->
-					<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+					<div class="product-sec1">
 
-						<div class="row" id="list-index">
+						<div class="row" id="list-index" style="display: flex; flex-wrap: wrap; margin-top: 20px;">
 
 							@foreach($product as $p)
 
 							
 
-							<div class="col-md-4 product-men mt-5">
+							<div class="pr-item" style="width: calc(25% - 30px);
+    margin: 0 15px;
+    margin-bottom: 32px;
+    box-shadow: 0px 2px 1.5px 0px #ccc;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item text-center">
 										<a id="wishlist_producturl{{$p->product_id}}" href="{{route('cli_detail',$p->product_id)}}"><div class="scale-img">
@@ -33,7 +40,7 @@
 											@if($p->gia_km < $p->product_price && $p->gia_km >0)
 											<span class="badge badge-pill badge-danger ban">-{{ROUND($gia,1)}}%</span>
 											@endif
-											<img id="wishlist_productimage{{$p->product_id}}" class="pro_img" src="{!! asset('images/'.$p->product_image)!!}" alt="">
+											<img id="wishlist_productimage{{$p->product_id}}" style="width: 100%;" class="pro_img" src="{!! asset('images/'.$p->product_image)!!}" alt="">
 
 										</div></a>
 
@@ -76,9 +83,9 @@
 											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form>
 													@csrf
-													<fieldset> 
+													<fieldset class="mb-2"> 
 
-														<input type="button" data-toggle="modal" data-target="#xemnhanh"  value="@lang('lang.quickview')" style="background: tomato" class="btn btn-default xemnhanh" data-id_soluong="{{$p->soluong}}" data-id_product="{{$p->product_id}}">
+														<input type="button" data-toggle="modal" data-target="#xemnhanh"  value="@lang('lang.quickview')" style="background: #d3b673" class="btn btn-default xemnhanh" data-id_soluong="{{$p->soluong}}" data-id_product="{{$p->product_id}}">
 
 													</fieldset>
 												</form>
@@ -105,7 +112,7 @@
 							
 						</div>
 
-						<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3 patop">
+						<h3 class="tittle-w3l text-center patop" style="margin-top: 50px;margin-bottom: 0 !important;">
 						TOPPING</h3>
 						<div class="run1 cach">
 
@@ -150,7 +157,7 @@
 						</div>
 
 
-						<div class="join-w3l1 py-sm-5 py-4">
+						<div class="join-w3l1">
 							<div class="container py-xl-4 py-lg-2">
 								<div class="row">
 									<div class="col-lg-6">
@@ -186,11 +193,18 @@
 						</div>
 						<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3 sellchay1">@lang('lang.SelleingProduct')</h3>
 
-						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+						<div class="product-sec1">
 							
-							<div class="row">
+							<div class="row" style="display: flex; flex-wrap: wrap; margin-top: 20px;">
 								@foreach($sp as $b)
-								<div class="col-md-4 product-men mt-5 wid">
+								<div class="" style="width: calc(25% - 30px);
+    margin: 0 15px;
+    margin-bottom: 32px;
+    box-shadow: 0px 2px 1.5px 0px #ccc;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
 											
@@ -201,7 +215,7 @@
 												@if($b->gia_km < $b->product_price && $b->gia_km >0)
 												<span class="badge badge-pill badge-danger ban">-{{ROUND($gia,1)}}%</span>
 												@endif
-												<img class="pro_img" src="{!! asset('images/'.$b->product_image)!!}" alt="">
+												<img class="pro_img" style="width: 100%;" src="{!! asset('images/'.$b->product_image)!!}" alt="">
 
 												<!--  -->
 
@@ -248,7 +262,7 @@
 														@csrf
 														<fieldset> 
 
-															<input type="button" data-toggle="modal" data-target="#xemnhanh" style="background: tomato" value="@lang('lang.quickview')" class="btn btn-default xemnhanh" data-id_soluong="{{$b->soluong}}" data-id_product="{{$b->product_id}}">
+															<input type="button" data-toggle="modal" data-target="#xemnhanh" style="background:#d3b673" value="@lang('lang.quickview')" class="btn btn-default mb-2 xemnhanh" data-id_soluong="{{$b->soluong}}" data-id_product="{{$b->product_id}}">
 
 														</fieldset>
 													</form> 
