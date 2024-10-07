@@ -27,7 +27,7 @@ return [
 	'addToCard'=>'THÊM VÀO GIỎ HÀNG',
 	'close'=>'ĐÓNG',
 	'goToCart'=>'ĐI TỚI GIỎ HÀNG',
-	'ProductType'=>'loại sản phẩm',
+	'ProductType'=>'Loại sản phẩm',
 	'Quicklink'=>'Liên kết nhanh',
 	'FollowUsAt'=>'Theo dõi chúng tôi tại',
 

@@ -12,7 +12,9 @@
 	<meta name="robots" content="INDEX,FOLLOW" />
 	<link rel="canonical" href="{{$url_canonical}}" />
 	<meta name="author" content="">
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<?php
 	if ($com == 'detail') { ?>
 		<meta property="og:url" content="{{$url_canonical}}" />
@@ -50,7 +52,6 @@
 
 	<link href="{!! asset('web/css/jquery.simplyscroll-style.css')!!}" rel="stylesheet" type="text/css" media="all" />
 	<link href="{!! asset('web/css/jquery.simplyscroll.css')!!}" rel="stylesheet" type="text/css" media="all" />
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="{!! asset('web/css/owl_them.css')!!}">
 	<link rel="stylesheet" href="{!! asset('web/css/owl.css')!!}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
