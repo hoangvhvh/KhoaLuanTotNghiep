@@ -30,34 +30,69 @@ class ClientController extends Controller
         $product=product::whereNotIn('category_id',[10])->where('product_status',1)->orderBy('product_id','desc')->paginate(6);
         return view('client.paginate_index',compact('product'))->render();
     }
-    public function giohang(){
-     $output='';
-     $total = 0 ;
-     if(count((array)session::get('cart'))==0){
-        $output.='<a href="#" title="View your shopping cart" class="cart-link">
-        <span class="amount"> 0 VNĐ</span>
-        <span class="contents"><span class="badge badge-pill badge-danger">0</span><span class="lai">loại sản phẩm</span></span>';
-    }else{
-        foreach(session::get('cart') as $id => $details){
-            $si=$details['size'];
-            $km=$details['price']-$details['price_pro'];
-            if($si=="Lớn")
-            {
-                $sub=($km+(($km*20)/100))*$details['quantity'];
-            }elseif($si=="Nhỏ"){
-               $sub=($km-(($km*20)/100))*$details['quantity'];
-           }else{
-            $sub=$km*$details['quantity'];
-        }
-        $total += $sub; 
-    }
-    $output.='<a href="#" title="View your shopping cart" class="cart-link">
-    <span class="amount">'. number_format($total,0,',','.').' VNĐ</span>
-    <span class="contents"><span class="badge badge-pill badge-danger">'.count((array)session::get('cart')) .'</span><span class="lai">loại sản phẩm</span></span>';
-}
-echo $output;
+//     public function giohang(){
+//      $output='';
+//      $total = 0 ;
+//      if(count((array)session::get('cart'))==0){
+//         $output.='<a href="#" title="View your shopping cart" class="cart-link">
+//         <span class="amount"> 0 VNĐ</span>
+//         <span class="contents"><span class="badge badge-pill badge-danger">0</span><span class="lai">loại sản phẩm</span></span>';
+//     }else{
+//         foreach(session::get('cart') as $id => $details){
+//             $si=$details['size'];
+//             $km=$details['price']-$details['price_pro'];
+//             if($si=="Lớn")
+//             {
+//                 $sub=($km+(($km*20)/100))*$details['quantity'];
+//             }elseif($si=="Nhỏ"){
+//                $sub=($km-(($km*20)/100))*$details['quantity'];
+//            }else{
+//             $sub=$km*$details['quantity'];
+//         }
+//         $total += $sub; 
+//     }
+//     $output.='<a href="#" title="View your shopping cart" class="cart-link">
+//     <span class="amount">'. number_format($total,0,',','.').' VNĐ</span>
+//     <span class="contents"><span class="badge badge-pill badge-danger">'.count((array)session::get('cart')) .'</span><span class="lai">loại sản phẩm</span></span>';
+// }
+// echo $output;
 
+// }
+public function giohang(){
+    $output = '';
+    $total = 0;
+    
+    // Kiểm tra nếu giỏ hàng trống
+    if (count((array)session::get('cart')) == 0) {
+        $output .= '<a href="#" title="View your shopping cart" class="cart-link">
+        <span class="cart-icon"></span> <i class="fa fa-shopping-cart"></i>
+        <span class="badge badge-pill badge-danger">0</span>'; // Hiển thị số lượng sản phẩm = 0
+    } else {
+        // Duyệt qua các sản phẩm trong giỏ và tính tổng tiền
+        foreach (session::get('cart') as $id => $details) {
+            $si = $details['size'];
+            $km = $details['price'] - $details['price_pro'];
+            
+            if ($si == "Lớn") {
+                $sub = ($km + (($km * 20) / 100)) * $details['quantity'];
+            } elseif ($si == "Nhỏ") {
+                $sub = ($km - (($km * 20) / 100)) * $details['quantity'];
+            } else {
+                $sub = $km * $details['quantity'];
+            }
+
+            $total += $sub;
+        }
+
+        // Tạo output với icon giỏ hàng và tổng tiền
+        $output .= '<a href="#" title="View your shopping cart" class="cart-link">
+        <span class="cart-icon"></span> <i class="fa fa-shopping-cart"></i>
+        <span class="badge badge-pill badge-danger">' . count((array)session::get('cart')) . '</span>'; // Hiển thị số lượng sản phẩm
+    }
+    
+    echo $output;
 }
+
 public function show(Request $req){
     $output='';
 
@@ -93,7 +128,7 @@ public function show(Request $req){
         </div>
         </div>
         <div class="detail">
-        <h5 style="text-transform: uppercase;color: steelblue;">'. $details['name'] .'</h5>
+        <h5 style="text-transform: uppercase;color: #d3b673;">'. $details['name'] .'</h5>
         <span class="item-price"><span class="giaca">Giá:<span style="font-size: 20px; color: brown;">'.number_format($tien,0,',','.').' VNĐ</span><br>
         <span  class="quantity1">Số lượng: <span style="font-size: 20px; color: brown;">'. $details['quantity'] .'</span></span><br>';
         if($details['size']==""){

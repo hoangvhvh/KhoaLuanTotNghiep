@@ -66,23 +66,19 @@
 						<h3 class=" font-weight-bold mb-3"  style="color:black;font-weight:bold">@lang('lang.contact')</h3>
 						<ul>
 							<li class="mb-3">
-								<i class="fas fa-map-marker"></i> 65 Huỳnh Thúc Kháng, Bến Nghé, quận 1, Thành phố Hồ Chí Minh</li>
+								<i class="fas fa-map-marker"></i> 65 Trần Phú, Thành phố Huế</li>
 							<li class="mb-3">
 								<i class="fas fa-mobile"></i> 0343754517 </li>
 							<li class="mb-3">
 								<i class="fas fa-phone"></i> 0999999999 </li>
 							<li class="mb-3">
 								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> thanhtrung@gmail.com</a>
-							</li>
-							<li>
-								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> thanhtrung@gmail.com</a>
+								<a href="mailto:example@mail.com"> duchoang@gmail.com</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
-						<div class="footer-grids  w3l-socialmk mt-3">
+						<div class="footer-grids  w3l-socialmk">
 							<h3 class="font-weight-bold mb-3" style="color:black;font-weight:bold">@lang('lang.FollowUsAt')</h3>
 							<div class="social">
 								<ul>
@@ -116,8 +112,8 @@
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2022 Tea Milk. All rights reserved | Design by 
-				<a href="http://w3layouts.com"> Nguyễn Thành Trung.</a>
+			<p class="text-center text-white">© 2024 Tea Milk. All rights reserved | Design by 
+				<a href="http://w3layouts.com"> Nguyễn Đức Hoàng.</a>
 			</p>
 		</div>
 	</div>

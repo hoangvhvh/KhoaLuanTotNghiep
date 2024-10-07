@@ -27,7 +27,7 @@
 										
 										<a href="{{route('cli_detail',$s->product_id)}}">
 											<div class="scale-img">
-												<img class="pro_img4" src="{!!asset('images/'.$s->product_image)!!}"  alt=""></a>
+												<img class="pro_img4" style="width: 100%;" src="{!!asset('images/'.$s->product_image)!!}"  alt=""></a>
 											</div>
 											
 										</div>
@@ -42,7 +42,7 @@
 												<form>
 													@csrf
 													<fieldset> 
-														<input type="button" data-toggle="modal" data-target="#xemnhanh" style="background: tomato"  value="@lang('lang.quickview')" class="btn btn-default xemnhanh" data-id_soluong="{{$s->soluong}}" data-id_product="{{$s->product_id}}">
+														<input type="button" data-toggle="modal" data-target="#xemnhanh" style="background: #d3b673"  value="@lang('lang.quickview')" class="btn btn-default xemnhanh" data-id_soluong="{{$s->soluong}}" data-id_product="{{$s->product_id}}">
 													</fieldset>
 												</div>
 
