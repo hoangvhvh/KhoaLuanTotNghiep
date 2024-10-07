@@ -94,7 +94,7 @@
 <body>
 	<div class="container w-1200">
 		<div class="title">
-			<p>CỬA HÀNG TRÀ SỮA TEA MILK</p>
+			<p>CỬA HÀNG TRÀ SỮA LAK LAK - DUC HOANG</p>
 			<p>CHUYÊN BÁN CÁC LOẠI TRÀ SỮA THƠM NGON VÀ CHẤT LƯỢNG</p>
 		</div>
 		<div class="content w-900">

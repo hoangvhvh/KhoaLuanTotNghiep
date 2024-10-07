@@ -321,7 +321,7 @@ span.tt {
     font-size: 20px;
 }
 .bao_detail{
-    background: #ecd7d1;
+    background: transparent;
 }
 span.loai {
     font-family: 'Lato';
@@ -796,7 +796,8 @@ ul {
     margin-bottom: 20px;
 }
 button.btn.btn-default.redirect-cart {
-    background: yellowgreen;
+    background: #222;
+    color: #fff;
     text-transform: capitalize;
 }
 button.btn.btn-secondary {
@@ -921,9 +922,9 @@ button.btn.btn-danger.btn.cart.remove-from-cart {
     margin-left: 14px;
 }
 .add-to-cart{
-   color: #0a5a6c;
-   background: #89f4e6;
-   border: 3px solid #6cd4fc;
+   color: #fff;
+   background: #d3b673;
+   border: 3px solid #d3b673;
    width: 100%;
 }
 .bao3{
@@ -998,7 +999,7 @@ span.giohang {
 }
 .background{
     position: relative;
-    background: url('../pngtree-splashing-milk-tea-with-green-leaves-background-picture-image_1240849.jpg')center no-repeat;
+    background: url('../images/banner_.jpg')center no-repeat;
     width: 100%;
     height: 752px;
     display: flex;
@@ -1139,9 +1140,10 @@ margin: 28px 57px;
     padding-bottom: 50px;
 }
 input#buy_quickview {
+    border: none;
     margin-top: 23px;
-    color: white;
-    background: teal;
+    color: #FFF;
+    background: #d3b673;
 }
 /*-- modal login --*/
 .img-con {
@@ -1223,7 +1225,7 @@ p.dont-do a {
 .modal-footer .btn-secondary {
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 10px 14px;
+    padding: 0.380rem 0.75rem;
 }
 
 .modal-footer .btn-primary {
@@ -2268,7 +2270,7 @@ span.item_price {
 }
 .hinh{
     width: 1200px;
-    height: 354px;
+    height: 450px;
 }
 h3.effect-bg {
     color: #350202b3;
@@ -2322,6 +2324,7 @@ p.w3l-nut-middle {
 }
 
 .join-agile {
+    height: 100%;
     background: #f5eee9;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
@@ -2609,13 +2612,13 @@ h2.footer-top-head-w3l {
 /*-- inner pages --*/
 
 .page-head_agile_info_w3l {
-    background: url(../images/zz.png) no-repeat center;
+    background: url(../images/banner_2.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
     -moz-background-size: cover;
-    min-height: 300px;
+    min-height: 650px;
 }
 
 .page-head_agile_info_w3l-2 {
@@ -2824,8 +2827,8 @@ img.hi{
     text-transform: uppercase;
 }
 input.btn.btn-default.add-to-cart {
-    background: darkcyan;
-    color: black;
+    background: #d3b673 !important;
+    color: #fff;
     text-transform: capitalize;
 }
 .chon {

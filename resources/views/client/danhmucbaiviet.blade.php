@@ -37,6 +37,7 @@
                                     <h4 class="pt-1">
                                         <a class="title_baiviet" href="">{{$p->post_title}}</a>
                                     </h4>
+                                    <br>
                                     <p ><?=htmlspecialchars_decode($p->post_desc)?></p>
                                     <a   href="{{url('/bai-viet/'.$p->post_slug)}}" class="btn btn-default btn-sm xem">Xem bài viết</a>
                                 </div>

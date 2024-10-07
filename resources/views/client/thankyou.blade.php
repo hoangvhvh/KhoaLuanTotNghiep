@@ -15,7 +15,7 @@
 @include('inc.search_form')
 @include('inc.menu')
 <div class="background"><span class="thank"></span>
-<img src="../../dao.png" alt="">
+<img src="../../z10.jpg" alt="">
 </div>
 <script>
 	var string="Cảm ơn bạn đã mua sản phẩm của shop chúng tôi";

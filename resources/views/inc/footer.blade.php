@@ -2,7 +2,7 @@
 		<div class="footer-top-first">
 			<div class="container py-md-5 py-sm-4 py-3">
 				<!-- footer first section -->
-				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Tea Milk :</h2>
+				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Duc Hoang - Tra Sua Lak Lak:</h2>
 			
 				<div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
 					@foreach($chinh as $c)
@@ -66,14 +66,14 @@
 						<h3 class=" font-weight-bold mb-3"  style="color:black;font-weight:bold">@lang('lang.contact')</h3>
 						<ul>
 							<li class="mb-3">
-								<i class="fas fa-map-marker"></i> 65 Trần Phú, Thành phố Huế</li>
+								<i class="fas fa-map-marker"></i>Kiệt 104 Điện Phủ, Phường Trường An, Thành phố Huế</li>
 							<li class="mb-3">
-								<i class="fas fa-mobile"></i> 0343754517 </li>
+								<i class="fas fa-mobile"></i> 0938163561 </li>
 							<li class="mb-3">
-								<i class="fas fa-phone"></i> 0999999999 </li>
+								<i class="fas fa-phone"></i> 0933615661 </li>
 							<li class="mb-3">
 								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> duchoang@gmail.com</a>
+								<a href="mailto:example@mail.com"> trasualaklak@gmail.com</a>
 							</li>
 						</ul>
 					</div>
@@ -112,8 +112,8 @@
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2024 Tea Milk. All rights reserved | Design by 
-				<a href="http://w3layouts.com"> Nguyễn Đức Hoàng.</a>
+			<p class="text-center text-white">© 2024 Trà sữa Lak Lak. All rights reserved | Design by 
+				<a href="http://w3layouts.com"> Trần Đức Hoàng.</a>
 			</p>
 		</div>
 	</div>

@@ -21,10 +21,10 @@
     <div class="container" style="background: #222; border-radius: 12px; padding :15px;">
         <div class="col-md-12">
             <p style="text-align:center; color:#FFF">Đây là email tự động khách hàng không trả lời email này.</p>
-            <div class="row" style="background: #cccc00; padding: 15px;">
+            <div class="row" style="background: #d3b673; padding: 15px;">
 
                 <div class="col-md-6" style="text-align: center; color:#FFF; font-weight: bold; font-size: 30px;">
-                    <h4 style="magrin :0">CỦA HÀNG TRÀ SỮA MILK TEAK</h4>
+                    <h4 style="magrin :0">CỬA HÀNG TRÀ SỮA LAK LAK - DUC HOANG</h4>
                     <h4 style="magrin :0">CHUYÊN BÁN CÁC LOẠI TRÀ SỮA THƠN NGON CHẤT LƯỢNG CAO</h4>
                 </div>
 

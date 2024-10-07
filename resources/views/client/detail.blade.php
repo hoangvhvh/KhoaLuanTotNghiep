@@ -186,7 +186,7 @@
 							<div class="form-group">
 								<input type="hidden" name="commentId" class="commentId" id="commentId" value="0"/>
 								<input type="hidden" name="pro_id" id="pro_id" class="pro_id" value="{{$value->product_id}}">
-								<input type="submit" name="submit" id="submit" class="btn btn-color" value="Gửi bình luận" />
+								<input type="submit" style="background: #d3b673;color: #fff;" name="submit" id="submit" class="btn btn-color" value="Gửi bình luận" />
 							</div>
 						</form>	
 						<li id="binhluan">
